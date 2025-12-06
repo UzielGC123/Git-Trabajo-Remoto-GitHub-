@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Git: Trabajo Remoto (GitHub)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .boton {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1e88e5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        .boton:hover {
+            background-color: #1565c0;
+        }
+        .seccion {
+            display: none;
+            margin-top: 20px;
+        }
+        hr {
+            margin: 25px 0;
+        }
+        pre {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 6px;
+        }
+    </style>
+
+    <script>
+        function mostrar(id) {
+            document.querySelectorAll(".seccion").forEach(s => s.style.display = "none");
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Git: Trabajo Remoto (GitHub)</h1>
+
+    <!-- BOTONES -->
+    <button class="boton" onclick="mostrar('infografia')">Ver Infografía</button>
+    <button class="boton" onclick="mostrar('pdf')">Ver PDF</button>
+    <button class="boton" onclick="mostrar('video')">Ver Video</button>
+    <button class="boton" onclick="mostrar('presentacion')">Ver Presentación</button>
+    <button class="boton" onclick="mostrar('integrantes')">Ver Integrantes</button>
+    <button class="boton" onclick="mostrar('ejercicio')">Ver Ejercicio</button>
+
+    <hr>
+
+    <!-- SECCIONES OCULTAS -->
+
+    <div id="infografia" class="seccion">
+        <h2>Infografía</h2>
+        <img src="Infografia.jpg" width="500">
+    </div>
+
+    <div id="pdf" class="seccion">
+        <h2>Guía Técnica (PDF)</h2>
+        <a href="Guia_Tecnica.pdf" target="_blank">Abrir PDF</a>
+    </div>
+
+    <div id="video" class="seccion">
+        <h2>Video</h2>
+        <video width="600" controls>
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
+    </div>
+
+    <div id="presentacion" class="seccion">
+        <h2>Presentación</h2>
+        <a href="presentacion.pptx" download>Descargar Presentación</a>
+    </div>
+
+    <div id="integrantes" class="seccion">
+        <h2>Integrantes</h2>
+        <ul>
+            <li>Uziel Alfredo</li>
+            <li>Lizet Anahí</li>
+            <li>Lilia</li>
+            <li>Adriel</li>
+            <li>Rosario</li>
+        </ul>
+    </div>
+
+    <div id="ejercicio" class="seccion">
+        <h2>Ejercicio</h2>
+        <p><strong>Actividad:</strong></p>
+        <p>
+            Crea un <strong>nuevo repositorio</strong> en GitHub con el nombre que tú elijas.  
+            Luego, desde tu computadora, clónalo utilizando el siguiente comando:
+        </p>
+
+        <pre>
+git clone https://github.com/tu_usuario/nombre_del_repositorio.git
+        </pre>
+
+        <p>
+            Sustituye <code>tu_usuario</code> y <code>nombre_del_repositorio</code> por los valores reales de tu cuenta y tu repositorio.
+        </p>
+    </div>
+
+</body>
+</html>
